@@ -1,0 +1,66 @@
+<h1> Φόρουμ Χημείας </h1>
+
+<ul>
+  <li>
+    <a href="/chemistry_posts" class="topic">
+      <h2> Ερωτήσεις Θεωρίας: ΧΗΜΕΙΑ </h2>
+
+      <div class="desc">
+	<div>
+	  <p> Εδώ μπορείς να συζητήσεις τις θεωρητικές απορίες σου σχετικά με την Χημεία </p>
+	</div>
+	<p class="recent"> Τελευταία ανάρτηση από {{ .Chemistry.Name }} {{.Chemistry.Time}}</p>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="/mathematics_posts" class="topic">
+      <h2> Ερωτήσεις Θεωρίας: ΜΑΘΗΜΑΤΙΚΑ</h2>
+      <div class="desc">
+	<div>
+	  <p> Εδώ μπορείς να συζητήσεις τις θεωρητικές απορίες σου σχετικά με τα Μαθηματικά  </p>
+	</div>
+      	<p class="recent"> Τελευταία ανάρτηση από {{if .Mathematics.Name }} {{ .Mathematics.Name}} {{else}} κανέναν {{end}} {{.Mathematics.Time}}</p>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="/physics_posts" class="topic">
+      <h2> Ερωτήσεις Θεωρίας: ΦΥΣΙΚΗ</h2>
+      <div class="desc">
+	<div>
+	  <p> Εδώ μπορείς να συζητήσεις τις θεωρητικές απορίες σου σχετικά με την Φυσική  </p>
+	</div>
+	<p class="recent"> Τελευταία ανάρτηση από {{if .Physics.Name }} {{.Physics.Name}} {{else}} κανέναν {{end}} {{.Physics.Time}}</p>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="/material_posts" class="topic">
+	<h2> Πηγές / Υλικό διαβάσματος </h2>
+	<div class="desc">
+	  <div>
+	  <p> Εδώ μπορείς να μοιραστείς χρήσιμες πηγές που ανακάλυψες  </p>
+	</div>
+	<p class="recent"> Τελευταία ανάρτηση από {{ if .Material.Name }} {{.Material.Name}} {{else}}  κανέναν {{end}} {{.Material.Time}}</p>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="/cs_posts" class="topic">
+      <h2> Πληροφορική / Προγράμματα Χημείας</h2>
+      <div class="desc">
+	<div>
+	  <p> Εδώ μπορείς να παρουσιάσεις χρήσιμες εφαρμογές που βρήκες ή έφτιαξες </p>
+	</div>
+	<p class="recent"> Τελευταία ανάρτηση από {{ if .CS.Name }} {{.CS.Name}} {{else}} κανέναν {{end}} {{.CS.Time}}</p>
+      </div>
+    </a>
+  </li>
+
+</ul>
+

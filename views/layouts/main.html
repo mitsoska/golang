@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Κεντρική </title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <main>
+      <nav>
+	<a href="/register.html"> Εγγραφή </a>
+	<a href="/login.html"> Σύνδεση </a>
+	<a href="/"> Κεντρική </a>
+	<p> Χαίρετε {{ if ne .Logged "Ανώνυμος: " }} {{ .Logged}} {{else}} Ανώνυμε {{end}}!</p>
+      </nav>
+
+      <div class="content">
+	{{embed}}
+      </div>
+
+      <footer>
+	Πηγαίος κώδικας της ιστοσελίδας: Πχ
+      </footer>
+    </main>
+  </body>
+</html>

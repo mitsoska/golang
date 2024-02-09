@@ -1,0 +1,16 @@
+<h1>{{.topic}}</h1>
+
+<ul class="posts">
+  {{range .posts}}
+  <li class="post">
+    <p> Ο/Η Χρήστης {{ .Name }} είπε : {{ .Content}}</p>
+    <p class="date">Ημερομηνία: {{ .Time}} </p>
+  </li>
+  {{end}}
+</ul>
+
+<form action="{{.Url}}" method="POST">
+  <input name="content" placeholder="Γράψε την απορία σου" >
+  <button type="submit"> Ανάρτηση </button>
+</form>
+
